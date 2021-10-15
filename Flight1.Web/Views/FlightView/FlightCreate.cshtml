@@ -4,48 +4,46 @@
     ViewData["Title"] = "FlightCreate";
 }
 
-<h1>FlightCreate</h1>
-
-<h4>FlightViewModel</h4>
+<h2 class="h2">Create Flight</h2>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="FlightCreate">
+        <form asp-action="FlightCreate" class="form-text">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Departure" class="control-label"></label>
+                <label asp-for="Departure" class="control-label font-weight-bold"></label>
                 <input asp-for="Departure" class="form-control" />
                 <span asp-validation-for="Departure" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Arrival" class="control-label"></label>
+                <label asp-for="Arrival" class="control-label font-weight-bold"></label>
                 <input asp-for="Arrival" class="form-control" />
                 <span asp-validation-for="Arrival" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="DepLocation" class="control-label"></label>
+                <label asp-for="DepLocation" class="control-label font-weight-bold"></label>
                 <input asp-for="DepLocation" class="form-control" />
                 <span asp-validation-for="DepLocation" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Destination" class="control-label"></label>
+                <label asp-for="Destination" class="control-label font-weight-bold"></label>
                 <input asp-for="Destination" class="form-control" />
                 <span asp-validation-for="Destination" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Capacity" class="control-label"></label>
+                <label asp-for="Capacity" class="control-label font-weight-bold"></label>
                 <input asp-for="Capacity" class="form-control" />
-                <span asp-validation-for="Capacity" class="text-danger"></span>
+                <span asp-validation-for="Capacity" class="text-danger font-weight-bold"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn btn-primary font-weight-bold" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="AllFlights" class="font-weight-bold">Back to List</a>
 </div>
 
 @section Scripts {

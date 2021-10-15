@@ -10,12 +10,14 @@ namespace Flight1.Web.Models
     {
         public int Id { get; set; }
 
+        [Display(Name = "Take Off")]
         [DataType(DataType.DateTime)]
         public DateTime Departure { get; set; }
 
         [DataType(DataType.DateTime)]
         public DateTime Arrival { get; set; }
 
+        [Display(Name = "Departure")]
         public String DepLocation { get; set; }
 
         public String Destination { get; set; }

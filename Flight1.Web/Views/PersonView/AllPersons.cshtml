@@ -4,13 +4,13 @@
     ViewData["Title"] = "AllPersons";
 }
 
-<h1>AllPersons</h1>
+<h2 class="h2" >All Persons</h2>
 
 <p>
-    <a asp-action="PersonCreate">Create New</a>
+    <a asp-action="PersonCreate" class="btn-lg btn-primary p-1">Create Passenger</a>
 </p>
-<table class="table">
-    <thead>
+<table class="table text-center">
+    <thead class="thead-dark text-center table-responsive-md">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.PersonId)
@@ -54,7 +54,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Job)
             </td>
-            <td>
+            <td class="font-weight-bold font-italic">
                 @Html.ActionLink("Edit", "PersonEdit", new { id = item.PersonId }) |
                 @Html.ActionLink("Details", "PersonDetails", new { id = item.PersonId }) |
                 @Html.ActionLink("Delete", "PersonDelete", new { id = item.PersonId })

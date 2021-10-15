@@ -3,6 +3,10 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome To Flight App</h1>
-    <p>The Purpose of this site is to view Flights and the passangers on those flights.</p>
+    <h1 class="display-4 text-primary">Welcome To Flight App</h1>
+    <h3 style="padding:25px" class="text-dark">The Purpose of this site is to view Flights and the passangers on those flights.</h3>
+    <div style="padding:25px">
+        <a asp-area="" asp-controller="FlightView" asp-action="AllFlights" class="btn-lg btn-primary text-lg-center border border-dark ">View Flights</a>
+        <a asp-area="" asp-controller="PersonView" asp-action="AllPersons"class="btn-lg btn-primary text-lg-center border border-dark">View Passangers</a>
+    </div>
 </div>

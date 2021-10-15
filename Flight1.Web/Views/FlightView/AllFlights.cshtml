@@ -4,15 +4,15 @@
     ViewData["Title"] = "AllFlights";
 }
 
-<h1>AllFlights</h1>
+<h2 class="h2">All Flights</h2>
 
 <p>
-    <a asp-action="FlightCreate">Create New</a>
+    <a asp-action="FlightCreate" class="btn-lg btn-primary p-1">Create Flight</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
+<table class="table text-center">
+    <thead class="thead-dark text-center table-responsive-md">
+        <tr >
+            <th >
                 @Html.DisplayNameFor(model => model.Id)
             </th>
             <th>
@@ -24,7 +24,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.DepLocation)
             </th>
-            <th>
+            <th >
                 @Html.DisplayNameFor(model => model.Destination)
             </th>
             <th>
@@ -33,9 +33,10 @@
             <th></th>
         </tr>
     </thead>
-    <tbody>
+    <tbody">
         @if (Model != null)
         {
+
             foreach (var flight in Model)
             {
                 <tr>
@@ -46,10 +47,10 @@
                     <td>@Html.DisplayFor(modelItem => flight.Destination)</td>
                     <td>@Html.DisplayFor(modelItem => flight.Capacity)</td>
 
-                    <td>
-                        @Html.ActionLink("Edit", "FlightEdit", new { id = flight.Id }) |
-                        @Html.ActionLink("Details", "FlightDetails", new { id = flight.Id }) |
-                        @Html.ActionLink("Delete","FlightDelete",new { id = flight.Id })
+                    <td class="font-weight-bold font-italic">
+                         @Html.ActionLink("Edit", "FlightEdit", new { id = flight.Id }) |
+                         @Html.ActionLink("Details", "FlightDetails", new { id = flight.Id })  |
+                         @Html.ActionLink("Delete", "FlightDelete", new { id = flight.Id }) 
                     </td>
                 </tr>
             }

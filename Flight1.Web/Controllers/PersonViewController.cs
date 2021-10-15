@@ -128,7 +128,6 @@ namespace Flight1.Web.Controllers
         public ActionResult PersonDelete(int id)
         {
             _personDAO.DeletePerson(id);
-            Console.WriteLine(id);
             return RedirectToAction("AllPersons");
         }
         

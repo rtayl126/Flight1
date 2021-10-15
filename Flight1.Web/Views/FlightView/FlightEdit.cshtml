@@ -4,12 +4,10 @@
     ViewData["Title"] = "FlightEdit";
 }
 
-<h1>FlightEdit</h1>
-
-<h4>FlightViewModel</h4>
+<h2 class="h2">Flight Edit</h2>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4b font-weight-bold">
         <form asp-action="FlightEdit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             
@@ -29,24 +27,24 @@
                 <span asp-validation-for="DepLocation" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Destination" class="control-label"></label>
+                <label asp-for="Destination" class="control-label font-weight-bold"></label>
                 <input asp-for="Destination" class="form-control" />
                 <span asp-validation-for="Destination" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Capacity" class="control-label"></label>
+                <label asp-for="Capacity" class="control-label font-weight-bold"></label>
                 <input asp-for="Capacity" class="form-control" />
                 <span asp-validation-for="Capacity" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Save" class="btn btn-primary font-weight-bold" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="AllFlights">Back to List</a>
+    <a asp-action="AllFlights" class="font-weight-bold">Back to List</a>
 </div>
 
 @section Scripts {

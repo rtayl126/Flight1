@@ -4,13 +4,13 @@
     ViewData["Title"] = "PersonEdit";
 }
 
-<h1>PersonEdit</h1>
+<h2 class="h2">Passenger Edit</h2>
 
-<h4>PersonViewModel</h4>
+
 <hr />
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="PersonEdit">
+    <div class="col-md-4 font-weight-bold">
+        <form asp-action="PersonEdit font-weight-bold">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="PersonId" class="control-label"></label>
@@ -43,14 +43,14 @@
                 <span asp-validation-for="Job" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Save" class="btn btn-primary font-weight-bold" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="AllPersons">Back to List</a>
+    <a asp-action="AllPersons" class="font-weight-bold">Back to List</a>
 </div>
 
 @section Scripts {
